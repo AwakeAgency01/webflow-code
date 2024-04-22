@@ -26,16 +26,20 @@ let tl = gsap.timeline({
   drawSVG: 0,
   stagger: 0.1,
 });
-tl.from(".footer_logo line, circle", {
-  duration: 0.8,
-  ease: "power2.inOut",
-});
-tl.from(".footer_logo path", {
-  duration: 1,
-  onComplete: function () {
-    $(".footer_logo_mask").css("display", "flex");
+tl.from(
+  ".footer_logo line, circle",
+  {
+    duration: 0.8,
   },
-});
+  0
+);
+tl.from(
+  ".footer_logo path",
+  {
+    duration: 1,
+  },
+  1
+);
 
 function animNumber(e, t, o) {
   var a = t,
