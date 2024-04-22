@@ -297,9 +297,7 @@ html {
   .custom_button:hover .custom_button_line {
     transform: translate(0%, 0%);
   }
-  .footer_logo_mask:hover .footer_logo_mask_fill {
-    opacity: 1;
-  }
+
   .footer_link:hover::after {
     width: 100%;
   }
@@ -781,15 +779,6 @@ html {
   to {
     transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
   }
-}
-
-.footer_logo_mask {
-  -webkit-mask-image: url("https://uploads-ssl.webflow.com/65f8428bc56b2d71733fa358/660549cb2f83fed9e5975e90_Frame%201321316770.svg");
-  mask-image: url("https://uploads-ssl.webflow.com/65f8428bc56b2d71733fa358/660549cb2f83fed9e5975e90_Frame%201321316770.svg");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  mask-size: 100% 100%;
-  mask-position: center center;
 }
 
 .word {
