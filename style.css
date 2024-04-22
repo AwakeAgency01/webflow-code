@@ -374,9 +374,12 @@ html {
     opacity: 1;
   }
 }
-@media screen and (max-width: 991px) {
-  .ollie_pane::before {
+@media screen and (max-width: 991px) and (min-width: 300px) {
+  .ollie_pane {
     display: none;
+  }
+  .ollie_pane::before {
+    display: none !important;
   }
   .ollie_tab_link.w--current .ollie_icon_wrapper {
     color: var(--base-color-neutral--white) !important;
