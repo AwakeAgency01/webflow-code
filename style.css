@@ -828,9 +828,6 @@ html {
 }
 
 @media screen and (max-width: 991px) {
-  .ollie_pane {
-    display: none;
-  }
   .ollie_pane::before {
     display: none !important;
   }

@@ -16,28 +16,22 @@ function debounce(func, wait, immediate) {
 
 gsap.registerPlugin(DrawSVGPlugin);
 
-gsap.from(".footer_logo line, circle", {
+let tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".footer_logo_wrapper",
     start: "top 70%", // Animation starts when the top of ".footer_logo" hits the center of the viewport
     toggleActions: "play none none none", // Defines what happens when scrolling forward and backward
   },
-  duration: 0.8,
-  drawSVG: 0,
   ease: "power2.inOut",
+  drawSVG: 0,
   stagger: 0.1,
 });
-gsap.from(".footer_logo path", {
-  scrollTrigger: {
-    trigger: ".footer_logo_wrapper",
-    start: "top 70%", // Animation starts when the top of ".footer_logo" hits the center of the viewport
-    toggleActions: "play none none none", // Defines what happens when scrolling forward and backward
-  },
-  duration: 1,
-  drawSVG: 0,
-
+tl.from(".footer_logo line, circle", {
+  duration: 0.8,
   ease: "power2.inOut",
-  stagger: 0.1,
+});
+tl.from(".footer_logo path", {
+  duration: 1,
   onComplete: function () {
     $(".footer_logo_mask").css("display", "flex");
   },
@@ -315,10 +309,4 @@ $(".menu_close").click(function () {
     duration: 0.3,
     ease: "power3.inOut",
   });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  let elements = document.querySelectorAll(".native_lottie_wrapper svg");
-
-  elements.style.transform3d = "";
 });
