@@ -274,6 +274,8 @@ background: linear-gradient(0deg, var(--base-color-neutral--white) 0%, rgba(0, 0
 }
 /* Hover state - trigger effect */
 
+
+/* Ollie screens shine effect */
 .header_image-wrapper::before {
   content: "";
   background: conic-gradient(transparent 270deg, white, transparent);
@@ -304,9 +306,7 @@ background: linear-gradient(0deg, var(--base-color-neutral--white) 0%, rgba(0, 0
 
 }
 @media screen and (max-width: 991px) {
-.ollie_tab_link.w--current .ollie_icon_wrapper {
-  color: var(--base-color-neutral--black) !important;
-}
+
 .ollie_tab_link.w--current .ollie_icon_wrapper::after {
   background: linear-gradient(180deg, white 0%, #a6a6a6 100%) !important;
 }
