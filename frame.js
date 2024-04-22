@@ -33,13 +33,13 @@ tl.from(
   },
   0
 );
-tl.from(
-  ".footer_logo path",
-  {
-    duration: 1,
-  },
-  1
-);
+// tl.from(
+//   ".footer_logo path",
+//   {
+//     duration: 1,
+//   },
+//   1
+// );
 
 function animNumber(e, t, o) {
   var a = t,
